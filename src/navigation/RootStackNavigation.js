@@ -4,6 +4,9 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import Splash from "../screens/splash/Splash";
 import Login from "../screens/login/Login";
 import Home from "../screens/home/Home";
+import Product from "../screens/product/Product";
+import Order from "../screens/order/Order"
+import Success from "../screens/success/Success";
 import BottomTabNavigator from "./BottomTabNavigator";
 
 const RootStackNavigation = () => {
@@ -30,9 +33,17 @@ const RootStackNavigation = () => {
           options={{
             headerShown: false,
           }}
-          name="BottomTabNavigator"
+          name="Home"
           component={BottomTabNavigator}
         />
+         <Stack.Screen  name="Product" component={Product} options={{title:'ProductDetail',headerShown: false,}} />
+         <Stack.Screen options={{
+            headerShown: false,
+          }} name="Order" component={Order}  />
+         <Stack.Screen options={{
+            headerShown: false,
+          }} name="Success" component={Success}  />
+         
         {/* <Stack.Screen
           options={{
             headerShown: false,

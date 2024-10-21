@@ -21,6 +21,14 @@
     "runtimeVersion": {
       "policy": "sdkVersion"
     },
-    "android": {}
+    "android": {},
+    "plugins": [
+      [
+        "expo-font",
+        {
+          "fonts": ["./assets/fonts/Lobster.ttf"]
+        }
+      ]
+    ]
   }
 }
